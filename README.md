@@ -1,49 +1,36 @@
-# vscode-portfolio
-[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://vscode.dev/github/itsnitinr/vscode-portfolio)
+# Portfolio VsCode
+[![Open in Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Open%20in%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://vscode.dev/github/Md1o1/portfolio)
 
-A Visual Studio Code themed developer portfolio website built with Next.js and deployed on Vercel.
+Um portfolio temático inspirado no Visual Studio construído com Next.js e publicado com o Vercel.
 
-![vscode-portfolio banner](https://imgur.com/JXJ9mpO.gif)
+![Exemplo](/public/img/portfolio.png)
 
-## Features Roadmap
+## Variáveis de Ambiente
+Caso queira dar um fork nesse repositório, crie um arquivo `.env.local` dentro do diretório do projeto, veja o arquivo `.env.exemplo`.
 
-- [ ] Themes and customizations
-  - [x] GitHub Dark (default)
-  - [ ] One Dark Pro
-  - [x] Dracula
-  - [x] Ayu
-  - [x] Nord
-- [x] Interactive custom terminal
-
-For other features and themes suggestions, please open an issue.
-
-## Environment Variables
-
-For fetching your articles from dev.to, create an `.env.local` file inside the project directory. Check the `.env.local.example` file for more information.
-
-## Running Development Server
-
+## Executando em ambiente local
+Basta instalar as dependências com npm install e depois executar: 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) com o seu navegador para ver o resultado.
 
-All VSCode related components can be found in the `components` folder. To change the content of the portfolio, check out the `pages` folder. To add or remove pages, modify `components/Sidebar.jsx` and `components/Tabsbar.jsx`.
+Todos os componentes relacionados ao VSCode podem ser encontrados na pasta `components`. Para alterar o conteúdo do portfólio, confira a pasta `pages`. Para adicionar ou remover páginas, modifique `components/Sidebar.jsx` e `components/Tabsbar.jsx`.
 
-## Next.js Resources
+## Recursos do Next.js 
 
-To learn more about Next.js, take a look at the following resources:
+Para aprender mais sobre o Next.js, veja os recursos seguintes:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Documentação Next.js](https://nextjs.org/docs) - Aprenda sobre Next.js, recursos e API.
+- [Aprenda Next.js](https://nextjs.org/learn) - um tutorial interativo do Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/)
+Para mais informações você pode acessar o repositório oficial: [Next.js](https://github.com/vercel/next.js/)
 
-## Deploy on Vercel
+## Publicação no Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A forma mais simples de fazer a publicação do seu projeto Next.js app é usando a [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) dos criadores do Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Confira a  [Documentação de publicação do Next.js ](https://nextjs.org/docs/deployment) para mais detalhes.
