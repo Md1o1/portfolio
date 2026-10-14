@@ -8,35 +8,35 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: 'Driwwwle',
+    title: 'Normalizador de vetores',
     description:
-      'Discover creative websites and developers. A portal for you to share your projects.',
-    logo: '/logos/driwwwle.svg',
-    link: 'https://github.com/itsnitinr/driwwwle',
-    slug: 'driwwwle',
+      'Um normalizador de vetores que testa três métodos diferentes.',
+    logo: '/logos/C.svg',
+    link: 'https://github.com/Md1o1/Vector-Normalizer',
+    slug: 'normalizador',
   },
   {
     title: 'VSCode Portfolio',
     description:
-      'A Visual Studio Code themed developer portfolio built with Next.js and CSS Modules.',
+      'Um portfólio de desenvolvedor com tema do Visual Studio Code, construído com Next.js e CSS Modules.',
     logo: '/logos/vsc.svg',
-    link: 'https://github.com/itsnitinr/vscode-portfolio',
+    link: 'https://github.com/Md1o1/portfolio',
     slug: 'vscode-portfolio',
   },
   {
-    title: 'Subtrackt',
+    title: 'Sistema em C para uma companhia aérea',
     description:
-      'A simple and elegant way to track your subscriptions and save money.',
-    logo: '/logos/subtrackt.svg',
-    link: 'https://github.com/itsnitinr/subtrackt',
-    slug: 'subtrackt',
+      'Um sistema em C para gerenciamento de voos.',
+    logo: '/logos/C.svg',
+    link: 'https://github.com/Md1o1/TP-Companhia-Aerea',
+    slug: 'tp-companhia-aerea',
   },
   {
-    title: 'Coolify Deployments',
+    title: 'Sistema em C para gerenciamento de um Hotel',
     description:
-      'VSCode extension to track and deploy your Coolify applications.',
-    logo: '/logos/coolify.svg',
-    link: 'https://github.com/itsnitinr/coolify-vscode-extension',
-    slug: 'coolify-vscode-extension',
+      'Um sistema em C para gerenciamento de um hotel.',
+    logo: '/logos/C.svg',
+    link: 'https://github.com/Md1o1/Hotel-Descanso-Garantido',
+    slug: 'tp-hotel',
   },
 ];

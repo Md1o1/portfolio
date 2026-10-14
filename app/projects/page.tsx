@@ -22,15 +22,15 @@ const ProjectsPage = () => {
               <VscFolderOpened className={styles.icon} size={24} />
             </div>
             <div className={styles.meta}>
-              <span className={styles.count}>{totalProjects} Projects</span>
+              <span className={styles.count}>{totalProjects} Projetos</span>
             </div>
           </div>
           
           <div className={styles.headerContent}>
-            <h1 className={styles.title}>Featured Work</h1>
+            <h1 className={styles.title}>Projetos Desenvolvidos</h1>
             <p className={styles.subtitle}>
-              A curated collection of projects I&apos;ve built. Each represents 
-              a unique challenge and learning experience.
+              Uma coleção selecionada de projetos que eu construí. Cada um representa 
+              um desafio único e uma experiência de aprendizado.
             </p>
           </div>
         </header>
@@ -48,13 +48,13 @@ const ProjectsPage = () => {
         <footer className={styles.footer}>
           <div className={styles.footerLine} />
           <a 
-            href="https://github.com/itsnitinr?tab=repositories"
+            href="https://github.com/md1o1?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.footerLink}
           >
             <VscGithub size={18} />
-            <span>Explore more on GitHub</span>
+            <span>Explore mais no GitHub</span>
             <VscLinkExternal size={14} />
           </a>
         </footer>

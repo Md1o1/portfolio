@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 
 import Layout from '@/components/Layout';
 
@@ -7,26 +8,26 @@ import '@/styles/themes.css';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Nitin Ranganath | Portfolio',
-    template: 'Nitin Ranganath | %s',
+    default: 'Kelvin Mendes | Portfolio',
+    template: 'Kelvin Mendes | %s',
   },
   description:
-    "Nitin Ranganath is an avid full stack web developer building websites and applications you'd love to use",
+    "Kelvin Mendes é um estudante de engenharia de software.",
   keywords: [
-    'nitin ranganath',
-    'nitin',
-    'ranganath',
+    'kelvin mendes',
+    'kelvin',
+    'mendes',
     'web developer portfolio',
-    'nitin web developer',
-    'nitin developer',
+    'kelvin web developer',
+    'kelvin developer',
     'mern stack',
-    'nitin ranganath portfolio',
+    'kelvin mendes portfolio',
     'vscode-portfolio',
   ],
   openGraph: {
-    title: "Nitin Ranganath's Portfolio",
+    title: "Kelvin Mendes Portfolio",
     description:
-      "A full-stack developer building websites that you'd like to use.",
+      "Estudante de engenharia de software.",
     images: ['https://imgur.com/4zi5KkQ.png'],
     url: 'https://vscode-portfolio.vercel.app',
   },
@@ -52,7 +53,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <Script id="theme-script" strategy="beforeInteractive">
+          {themeScript}
+        </Script>
       </head>
       <body>
         <Layout>{children}</Layout>

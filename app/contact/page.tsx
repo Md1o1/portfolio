@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <div className={styles.layout}>
-      <h1 className={styles.pageTitle}>Contact Me</h1>
+      <h1 className={styles.pageTitle}>Entre em contato</h1>
       <p className={styles.pageSubtitle}>
-        Feel free to reach out to me through any of the social platforms below.
-        I&apos;m always open to new opportunities and connections.
+        Sinta-se à vontade para entrar em contato comigo através de qualquer uma das plataformas sociais abaixo.
+        Estou sempre aberto a novas oportunidades e conexões.
       </p>
       <div className={styles.container}>
         <div className={styles.contactContainer}>

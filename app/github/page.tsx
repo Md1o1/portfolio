@@ -16,7 +16,7 @@ export const revalidate = 600;
 
 async function getGithubData() {
   const userRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`
+    `https://api.github.com/users/${process.env.PUBLIC_GITHUB_USERNAME}`
   );
   if (!userRes.ok) {
     throw new Error(`Failed to fetch user: ${userRes.status}`);
@@ -24,7 +24,7 @@ async function getGithubData() {
   const user: User = await userRes.json();
 
   const repoRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?sort=pushed&per_page=6`
+    `https://api.github.com/users/${process.env.PUBLIC_GITHUB_USERNAME}/repos?sort=pushed&per_page=6`
   );
   if (!repoRes.ok) {
     throw new Error(`Failed to fetch repos: ${repoRes.status}`);
@@ -64,7 +64,7 @@ export default async function GithubPage() {
             className={styles.profileLink}
           >
             <VscGithub size={18} />
-            <span>View Profile</span>
+            <span>Ver Perfil</span>
             <VscLinkExternal size={14} />
           </a>
         </header>
@@ -77,7 +77,7 @@ export default async function GithubPage() {
             </div>
             <div className={styles.statInfo}>
               <span className={styles.statValue}>{user.public_repos}</span>
-              <span className={styles.statLabel}>Repositories</span>
+              <span className={styles.statLabel}>Repositórios</span>
             </div>
           </div>
 
@@ -87,7 +87,7 @@ export default async function GithubPage() {
             </div>
             <div className={styles.statInfo}>
               <span className={styles.statValue}>{user.followers}</span>
-              <span className={styles.statLabel}>Followers</span>
+              <span className={styles.statLabel}>Seguidores</span>
             </div>
           </div>
 
@@ -99,7 +99,7 @@ export default async function GithubPage() {
               <span className={styles.statValue}>
                 {repos.reduce((acc, repo) => acc + repo.stargazers_count, 0)}
               </span>
-              <span className={styles.statLabel}>Total Stars</span>
+              <span className={styles.statLabel}>Estrelas</span>
             </div>
           </div>
 
@@ -111,17 +111,17 @@ export default async function GithubPage() {
               <span className={styles.statValue}>
                 {repos.reduce((acc, repo) => acc + repo.forks, 0)}
               </span>
-              <span className={styles.statLabel}>Total Forks</span>
+              <span className={styles.statLabel}>Forks</span>
             </div>
           </div>
         </div>
 
         {/* Contribution Graph */}
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Contribution Activity</h2>
+          <h2 className={styles.sectionTitle}>Atividade de Contribuição</h2>
           <div className={styles.contributions}>
             <GitHubCalendar
-              username={process.env.NEXT_PUBLIC_GITHUB_USERNAME!}
+              username={process.env.PUBLIC_GITHUB_USERNAME!}
               hideColorLegend
               hideMonthLabels
               colorScheme="dark"
@@ -139,14 +139,14 @@ export default async function GithubPage() {
         {/* Repositories */}
         <section className={styles.section}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Popular Repositories</h2>
+            <h2 className={styles.sectionTitle}>Repositórios Populares</h2>
             <a 
               href={`https://github.com/${user.login}?tab=repositories`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.viewAll}
             >
-              View All
+              Ver Todos
               <VscLinkExternal size={14} />
             </a>
           </div>

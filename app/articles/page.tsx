@@ -46,7 +46,7 @@ export default async function ArticlesPage() {
             
             <div className={styles.headerContent}>
               <div className={styles.headerTop}>
-                <h1 className={styles.title}>Articles</h1>
+                <h1 className={styles.title}>Artigos</h1>
                 <div className={styles.stats}>
                   <div className={styles.stat}>
                     <VscGlobe size={14} />
@@ -60,19 +60,19 @@ export default async function ArticlesPage() {
               </div>
               
               <p className={styles.subtitle}>
-                Technical writing on web development. Sharing insights, 
-                tutorials, and lessons learned from building real-world applications.
+                Pretendo começar a fazer artigos sobre desenvolvimento e tecnologia em geral num futuro próximo. 
+                Acompanhe para ver meus pensamentos, tutoriais e experiências compartilhadas.
               </p>
             </div>
           </div>
 
           <a 
-            href="https://dev.to/itsnitinr"
+            href="https://daily.dev/md1o1"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.profileLink}
           >
-            <span>DEV.to</span>
+            <span>Daily.Dev</span>
             <VscLinkExternal size={14} />
           </a>
         </header>

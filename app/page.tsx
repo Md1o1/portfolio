@@ -17,35 +17,35 @@ export default function HomePage() {
           </div>
 
           <div className={styles.intro}>
-            <p className={styles.greeting}>Hello, I&apos;m</p>
+            <p className={styles.greeting}>Olá, eu sou</p>
             
-            <h1 className={styles.name}>Nitin Ranganath</h1>
+            <h1 className={styles.name}>Kelvin Mendes</h1>
             
-            <p className={styles.role}>Full Stack Developer</p>
+            <p className={styles.role}>Analista de Projetos</p>
             
             <div className={styles.divider} />
             
             <p className={styles.description}>
-              I craft clean, performant web applications with modern technologies. 
-              Specialized in TypeScript, React, Node.js, and building products 
-              that users love.
+              Sou um estudante de engenharia de software com um grande interesse em segurança da informação. 
+              Minha experiência como técnico de service desk nos últimos seis anos me proporcionou habilidades avançadas em resolução de problemas em softwares e em sistemas operacionais como Windows e Linux, além de uma sólida compreensão de governança de TI.
+              Buscando aprimorar minhas habilidades em desenvolvimento de software e contribuir para projetos inovadores. 
             </p>
           </div>
 
           <div className={styles.actions}>
             <Link href="/projects" className={styles.primaryAction}>
-              <span>View Projects</span>
+              <span>Ver Projetos</span>
               <VscArrowRight size={18} />
             </Link>
             
             <Link href="/about" className={styles.secondaryAction}>
-              <span>Learn More</span>
+              <span>Saiba Mais</span>
             </Link>
           </div>
 
           <div className={styles.links}>
             <a 
-              href="https://github.com/itsnitinr" 
+              href="https://github.com/md1o1" 
               target="_blank" 
               rel="noopener noreferrer"
               className={styles.link}
@@ -58,7 +58,7 @@ export default function HomePage() {
             
             <Link href="/contact" className={styles.link}>
               <VscMail size={16} />
-              <span>Contact</span>
+              <span>Contato</span>
             </Link>
           </div>
         </div>

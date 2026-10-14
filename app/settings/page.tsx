@@ -36,16 +36,16 @@ const SettingsPage = () => {
             <VscColorMode className={styles.icon} size={24} />
           </div>
           <div className={styles.headerContent}>
-            <h1 className={styles.title}>Settings</h1>
+            <h1 className={styles.title}>Configurações</h1>
             <p className={styles.subtitle}>
-              Customize your editor appearance. Choose from curated themes 
-              that match your style.
+              Personalize a aparência do seu editor. Escolha entre temas curados 
+              que combinem com o seu estilo.
             </p>
           </div>
         </header>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>Color Theme</h2>
+          <h2 className={styles.sectionTitle}>Tema de Cores</h2>
           
           <div className={styles.themesGrid}>
             {THEMES.map((theme) => (

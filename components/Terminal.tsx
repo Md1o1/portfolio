@@ -13,59 +13,56 @@ interface TerminalLine {
 
 const commands: Record<string, () => string[]> = {
   help: () => [
-    'Available commands:',
-    '  help      - Show this help message',
-    '  about     - About me',
-    '  skills    - My technical skills',
-    '  projects  - View my projects',
-    '  contact   - Contact information',
-    '  theme     - Change theme (usage: theme <name>)',
-    '  themes    - List available themes',
-    '  clear     - Clear terminal',
-    '  date      - Show current date',
-    '  whoami    - Who am I?',
-    '  ls        - List directory contents',
-    '  pwd       - Print working directory',
-    '  echo      - Echo text (usage: echo <text>)',
+    'Comandos Disponíveis:',
+    '  help      - Exibir esta mensagem de ajuda',
+    '  about     - Sobre mim',
+    '  skills    - Minhas habilidades técnicas',
+    '  projects  - Visualizar meus projetos',
+    '  contact   - Informações de contato',
+    '  theme     - Alterar o tema (uso: theme <name>)',
+    '  themes    - Listar temas disponíveis',
+    '  clear     - Limpar o terminal',
+    '  date      - Exibir a data atual',
+    '  whoami    - Quem sou eu?',
+    '  ls        - Listar conteúdo do diretório',
+    '  pwd       - Exibir o diretório de trabalho atual',
+    '  echo      - Exibir texto (uso: echo <text>)',
   ],
   about: () => [
-    "Hi, I'm Nitin!",
-    'A passionate full-stack developer who loves building beautiful,',
-    'functional web applications. This portfolio is styled like VS Code',
-    'because I spend most of my time here anyway.',
+    'Olá, meu nome é Kelvin!',
+    'Um estudante de Engenharia de Software,',
+    'Esse é meu portfólio interativo, onde você pode explorar meus projetos e habilidades.',
   ],
   skills: () => [
-    'Technical Skills:',
-    '  Languages:  TypeScript, JavaScript, Python, Go, Rust',
-    '  Frontend:   React, Next.js, Vue, Tailwind CSS',
-    '  Backend:    Node.js, Express, FastAPI, GraphQL',
-    '  Database:   PostgreSQL, MongoDB, Redis',
-    '  DevOps:     Docker, Kubernetes, AWS, GitHub Actions',
-    '  Tools:      VS Code, Git, Figma, Linux',
+    'Habilidades Técnicas:',
+    '  Linguages:  TypeScript, JavaScript, HTML/CSS, Python, C/C++',
+    '  Front end:  React, Next.js, Tailwind CSS',
+    '  Back end:   Node.js, Spring Boot',
+    '  DevOps:     Docker, Azure',
+    '  Ferramentas:  VS Code, Git, Figma',
   ],
   projects: () => [
-    'Featured Projects:',
-    '  1. vscode-portfolio - This portfolio you are viewing!',
-    '  2. Various open-source contributions',
-    '  3. Full-stack web applications',
+    'Projetos em destaque:',
+    '  1. vscode-portfolio - Esse portfólio interativo!',
+    '  2. Sistema de gestão em C',
+    '  3. Normalização de vetores',
     '',
-    'Visit the Projects tab for more details.',
+    'Visite a aba de projetos para mais detalhes!',
   ],
   contact: () => [
-    'Contact Information:',
-    '  Email:    hello@example.com',
-    '  GitHub:   github.com/itsnitinr',
-    '  Twitter:  @itsnitinr',
-    '  LinkedIn: linkedin.com/in/itsnitinr',
+    'Informações de Contato:',
+    '  Email:    kelvinmendes8@gmail.com',
+    '  GitHub:   github.com/md1o1',
+    '  LinkedIn: linkedin.com/in/kelvin-mendes',
   ],
   themes: () => [
-    'Available themes:',
+    'Temas disponíveis:',
     ...THEME_KEYS.map((theme, i) => `  ${theme}${i === 0 ? '  (default)' : ''}`),
     '',
-    'Use "theme <name>" to change theme.',
+    'Use "theme <nome>" para trocar o tema.',
   ],
   date: () => [new Date().toString()],
-  whoami: () => ['visitor@portfolio ~ exploring awesome projects'],
+  whoami: () => ['visitor@portfolio ~ explorando projetos legais!'],
   ls: () => ['about/', 'projects/', 'skills/', 'contact/', 'README.md'],
   pwd: () => ['/home/visitor/portfolio'],
 };
@@ -90,15 +87,15 @@ const processCommand = (input: string): TerminalLine[] => {
     if ((THEME_KEYS as string[]).includes(args[0])) {
       document.documentElement.setAttribute('data-theme', args[0]);
       localStorage.setItem('theme', args[0]);
-      lines.push({ type: 'output', content: `Theme changed to ${args[0]}` });
+      lines.push({ type: 'output', content: `Tema alterado para ${args[0]}` });
     } else {
-      lines.push({ type: 'error', content: `Unknown theme: ${args[0]}. Type "themes" for available options.` });
+      lines.push({ type: 'error', content: `Tema desconhecido: ${args[0]}. Digite "themes" para ver as opções disponíveis.` });
     }
     return lines;
   }
 
   if (cmd === 'theme') {
-    lines.push({ type: 'error', content: 'Usage: theme <name>. Type "themes" for available options.' });
+    lines.push({ type: 'error', content: 'Uso: theme <nome>. Digite "themes" para ver as opções disponíveis.' });
     return lines;
   }
 
@@ -113,7 +110,7 @@ const processCommand = (input: string): TerminalLine[] => {
       lines.push({ type: 'output', content: line });
     });
   } else {
-    lines.push({ type: 'error', content: `Command not found: ${cmd}. Type "help" for available commands.` });
+    lines.push({ type: 'error', content: `Comando não encontrado: ${cmd}. Digite "help" para ver os comandos disponíveis.` });
   }
 
   return lines;
@@ -125,8 +122,8 @@ interface TerminalProps {
 
 const Terminal = ({ onToggle }: TerminalProps) => {
   const [lines, setLines] = useState<TerminalLine[]>([
-    { type: 'output', content: 'Welcome to the interactive terminal!' },
-    { type: 'output', content: 'Type "help" for available commands.' },
+    { type: 'output', content: 'Bem-vindo ao terminal interativo!' },
+    { type: 'output', content: 'Digite "help" para ver os comandos disponíveis.' },
     { type: 'output', content: '' },
   ]);
   const [input, setInput] = useState('');
